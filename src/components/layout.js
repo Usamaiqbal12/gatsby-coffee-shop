@@ -6,6 +6,7 @@ import PropTypes from "prop-types"
 
 import "./layout.css"
 import NavBar from './Globals/NavBar';
+import Footer from "./Globals/Footer";
 
 const Layout = ({ children }) => {
   
@@ -13,7 +14,7 @@ const Layout = ({ children }) => {
     <>
     <NavBar/>
         <main>{children}</main>
-       
+       <Footer/>
   
     </>
   )
