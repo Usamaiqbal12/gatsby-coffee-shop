@@ -8,6 +8,9 @@ module.exports = {
     author: `@gatsbyjs`,
     siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
   },
+  flags: {
+    FAST_DEV: true,
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
@@ -26,6 +29,14 @@ module.exports = {
        
       },
     },
+    {
+			resolve: 'gatsby-plugin-snipcart',
+			options: {
+				apiKey: process.env.SNIPCART_API,
+        autopop: true
+			}
+		},
+    
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
